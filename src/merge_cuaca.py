@@ -54,10 +54,11 @@ print(df_cuaca_merged.shape)
 print('\nUNIQUE STATION:')
 print(df_cuaca_merged['station'].unique())
 
-# save
+# save path
 SAVE_PATH = r'D:\fatiyya\KULIAH\TUGAS KULIAH\SEMESTER 6\DAMING\project-daming\data\data cuaca\cuaca_merged.csv'
 
-mask_us1 = df_cuaca_merged['station'] == 'us embassy 1'
+# DETEKSI DATA FAHRENHEIT
+mask_fahrenheit = df_cuaca_merged['temp'] > 60
 
 kolom_fahrenheit = [
     'tempmax',
@@ -69,11 +70,13 @@ kolom_fahrenheit = [
     'dew'
 ]
 
+# KONVERSI HANYA YANG FAHRENHEIT
 for col in kolom_fahrenheit:
-    df_cuaca_merged.loc[mask_us1, col] = (
-        (df_cuaca_merged.loc[mask_us1, col] - 32) * 5/9
+    df_cuaca_merged.loc[mask_fahrenheit, col] = (
+        (df_cuaca_merged.loc[mask_fahrenheit, col] - 32) * 5/9
     )
 
+# SAVE
 df_cuaca_merged.to_csv(SAVE_PATH, index=False)
 
 print('\nBERHASIL DISIMPAN')
