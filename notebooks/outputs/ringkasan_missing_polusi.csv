@@ -1,0 +1,25 @@
+,Tipe Data,Jumlah Missing,Persentase (%),Rekomendasi
+Waktu,object,0,0.0,Tidak ada missing
+ISPU PM10,float64,125858,59.75,Hapus kolom (>50% missing)
+ISPU PM2.5,float64,82891,39.35,KNN / model-based imputation
+ISPU SO2,float64,126280,59.96,Hapus kolom (>50% missing)
+ISPU CO,float64,125858,59.75,Hapus kolom (>50% missing)
+ISPU O3,float64,126868,60.23,Hapus kolom (>50% missing)
+ISPU NO2,float64,125936,59.79,Hapus kolom (>50% missing)
+Status By PM10,object,0,0.0,Tidak ada missing
+Status By PM2.5,object,0,0.0,Tidak ada missing
+Status By SO2,object,0,0.0,Tidak ada missing
+Status By CO,object,0,0.0,Tidak ada missing
+Status By O3,object,0,0.0,Tidak ada missing
+Status By NO2,object,0,0.0,Tidak ada missing
+Critical Parameter,object,0,0.0,Tidak ada missing
+Overall ISPU Status,object,0,0.0,Tidak ada missing
+tanggal,object,0,0.0,Tidak ada missing
+station,object,0,0.0,Tidak ada missing
+datetime,datetime64[ns],0,0.0,Tidak ada missing
+tahun,int32,0,0.0,Tidak ada missing
+bulan,int32,0,0.0,Tidak ada missing
+hari,int32,0,0.0,Tidak ada missing
+jam,int32,0,0.0,Tidak ada missing
+hari_minggu,int32,0,0.0,Tidak ada missing
+nama_hari,object,0,0.0,Tidak ada missing
