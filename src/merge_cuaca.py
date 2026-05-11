@@ -25,19 +25,14 @@ for path in file_cuaca:
 
         # READ CSV NORMAL
         df_temp = pd.read_csv(path)
-
         # tambah station
         df_temp['station'] = station_name
-
         # datetime
         df_temp['datetime'] = pd.to_datetime(df_temp['datetime'])
-
         print(df_temp.shape)
-
         all_cuaca.append(df_temp)
 
     except Exception as e:
-
         print(f'ERROR: {e}')
 
 # gabungkan semua
