@@ -1,0 +1,7 @@
+config,n_estimators,max_depth,min_samples_leaf,max_features,MAE,RMSE,R2
+RF_default_leaf2,120,,2,0.8,9.0416,11.6249,0.6268
+RF_depth16_leaf2,120,16.0,2,0.8,9.0989,11.6794,0.6233
+RF_sqrt_leaf2,120,,2,sqrt,9.1642,11.6943,0.6223
+RF_wide_leaf2,120,,2,1.0,9.1579,11.6956,0.6222
+RF_deeper_leaf1,120,,1,0.8,9.1764,11.7368,0.6195
+RF_robust_leaf4,120,,4,0.8,9.1787,11.7874,0.6163

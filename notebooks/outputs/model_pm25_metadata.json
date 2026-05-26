@@ -1,0 +1,62 @@
+{
+  "model_name": "Random Forest Regression",
+  "proposal_model": "Random Forest Regression",
+  "target": "ISPU PM2.5",
+  "features": [
+    "bulan",
+    "hari_minggu",
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip",
+    "station_bundaran hi",
+    "station_jagakarsa",
+    "station_kebun jeruk",
+    "station_kelapa gading",
+    "station_lubang buaya",
+    "station_us embassy 1",
+    "station_us embassy 2",
+    "bulan_sin",
+    "bulan_cos",
+    "hari_minggu_sin",
+    "hari_minggu_cos",
+    "pm25_lag_1",
+    "pm25_lag_2",
+    "pm25_lag_7",
+    "pm25_lag_14",
+    "pm25_roll_3_mean",
+    "pm25_roll_3_std",
+    "pm25_roll_7_mean",
+    "pm25_roll_7_std",
+    "pm25_roll_14_mean",
+    "pm25_roll_14_std"
+  ],
+  "data_path": "c:\\Users\\User\\Air Pollution - Daming Project\\data\\final for modelling\\dataset_final_model.csv",
+  "validation_start": "2024-01-16",
+  "test_start": "2024-05-27",
+  "train_core_rows": 5215,
+  "validation_rows": 924,
+  "train_full_rows": 6139,
+  "test_rows": 1540,
+  "best_validation_config": "RF_default_leaf2",
+  "final_random_forest_params": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "max_features": 0.8,
+    "oob_score": true
+  },
+  "oob_r2_train_full_model": 0.7053416498936997,
+  "metrics_regression_test": {
+    "MAE": 8.830401631735214,
+    "RMSE": 12.152670653543693,
+    "R2": 0.6550665247252079
+  },
+  "metrics_category_from_regression_test": {
+    "accuracy": 0.861038961038961,
+    "macro_f1": 0.5726012568391321,
+    "weighted_f1": 0.8293929985264228
+  }
+}

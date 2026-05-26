@@ -1,0 +1,5 @@
+model,MAE,RMSE,R2
+Random Forest Tuned,8.8304,12.1527,0.6551
+Random Forest Awal,8.8936,12.2501,0.6495
+Baseline Lag-1,10.2263,14.0955,0.536
+Baseline Mean,17.2222,21.2096,-0.0507
