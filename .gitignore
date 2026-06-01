@@ -1,1 +1,12 @@
 notebooks/data/processed/data_final_modeling.csv
+__pycache__/
+*.pyc
+
+# Python cache
+__pycache__/
+
+# XGBoost experiments - not pushed
+notebooks/02_Modelling_XGBoost.ipynb
+notebooks/04_Modelling_XGBoost_4split.ipynb
+notebooks/outputs/*xgboost*
+notebooks/outputs/*XGBoost*
