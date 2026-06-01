@@ -1,0 +1,3 @@
+metode,n_evaluasi,ruang_pencarian,waktu_total_detik,rata2_waktu_per_trial,best_units,best_dropout,best_learning_rate,best_epoch,best_val_MAE,best_val_RMSE,best_val_R2,best_test_MAE,best_test_RMSE,best_test_R2,best_test_MAPE,recall_TidakSehat_test,jumlah_prediksi_PM25_gt_100,keterangan
+Optuna TPE,16,"units={32,64,96,128}; dropout=[0.1,0.4]; learning_rate=[3e-4,2e-3] log",165.8,10.4,128,0.38969,0.00139049,10,9.0844,12.0085,0.5735,9.4201,13.1996,0.6237,18.5104,0.137,29,<== PEMENANG by val_RMSE
+Grid Search,12,"units={32,64,128}; dropout={0.1,0.3}; learning_rate={1e-3,5e-4}",113.8,9.5,32,0.3,0.001,27,9.2372,12.1239,0.5653,9.7491,13.5011,0.6063,19.4214,0.1644,36,

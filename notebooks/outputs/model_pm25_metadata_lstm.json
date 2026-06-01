@@ -1,0 +1,76 @@
+{
+  "model_name": "LSTM B (lebih besar 96-48 dp0.2)",
+  "algoritma": "LSTM (Keras)",
+  "arsitektur": {
+    "units1": 96,
+    "units2": 48,
+    "dropout": 0.2,
+    "bidirectional": false,
+    "lookback": 14,
+    "n_features": 20
+  },
+  "target": "ISPU PM2.5",
+  "features_per_timestep": [
+    "ISPU PM2.5",
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip",
+    "bulan_sin",
+    "bulan_cos",
+    "hari_minggu_sin",
+    "hari_minggu_cos",
+    "is_weekend",
+    "musim_hujan",
+    "station_bundaran hi",
+    "station_jagakarsa",
+    "station_kebun jeruk",
+    "station_kelapa gading",
+    "station_lubang buaya",
+    "station_us embassy 1",
+    "station_us embassy 2"
+  ],
+  "data_path": "c:\\Users\\User\\Air Pollution - Daming Project\\data\\final for modelling\\dataset_final_model.csv",
+  "skema_split": "time-based 70/15/15 (train/validation/test) on sequence end date",
+  "pemilihan_model": "val_RMSE terkecil di antara varian LSTM",
+  "model_final_dilatih_pada": "train + validation (test tidak dipakai untuk training)",
+  "epoch_retrain_final": 21,
+  "baris_train": 5299,
+  "baris_validation": 1134,
+  "baris_test": 1141,
+  "baris_train_plus_validation": 6433,
+  "rentang_test": [
+    "2024-07-22",
+    "2024-12-31"
+  ],
+  "metrik_validation_model_terpilih": {
+    "MAE": 9.519471168518066,
+    "RMSE": 12.356996946473535,
+    "R2": 0.5506397485733032,
+    "MAPE": 14.567778813761079
+  },
+  "metrik_test_model_terpilih": {
+    "MAE": 11.328277587890625,
+    "RMSE": 15.47020047255797,
+    "R2": 0.485501766204834,
+    "MAPE": 23.235800692106377
+  },
+  "evaluasi_pm25_tinggi": {
+    "Jumlah data PM2.5 > 100 pada test set": 73,
+    "Total data test set": 1141,
+    "MAE (PM2.5 > 100)": 19.6734,
+    "RMSE (PM2.5 > 100)": 22.1607,
+    "MAPE (PM2.5 > 100) %": 17.9665,
+    "Rata-rata aktual (PM2.5 > 100)": 107.3936,
+    "Rata-rata prediksi (PM2.5 > 100)": 87.9297,
+    "Jumlah PM2.5>100 yang JUGA diprediksi >100": 5
+  },
+  "metrik_kategori_test": {
+    "accuracy": 0.803680981595092,
+    "macro_f1": 0.5251009292235637,
+    "weighted_f1": 0.7896082858014599,
+    "recall_tidak_sehat": 0.0684931506849315
+  }
+}

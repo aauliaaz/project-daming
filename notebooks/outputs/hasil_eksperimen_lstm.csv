@@ -1,0 +1,4 @@
+model,val_MAE,val_RMSE,val_R2,val_MAPE,test_MAE,test_RMSE,test_R2,test_MAPE,recall_TidakSehat_test,epoch_terbaik,waktu_detik,keterangan
+LSTM B (lebih besar 96-48 dp0.2),9.5195,12.357,0.5506,14.5678,11.3283,15.4702,0.4855,23.2358,0.0685,21,76.9,<== TERBAIK (val_RMSE)
+LSTM C (bidirectional 48-24),9.8428,12.5371,0.5374,14.6084,10.5587,14.4377,0.5519,20.6501,0.0548,10,46.0,
+LSTM A (baseline 64-32 dp0.1),9.895,12.7639,0.5206,14.8502,10.4329,14.3478,0.5575,20.6592,0.0411,10,43.4,

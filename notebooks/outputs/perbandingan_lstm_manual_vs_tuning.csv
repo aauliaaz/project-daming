@@ -1,0 +1,4 @@
+sumber,model,val_RMSE,test_MAE,test_RMSE,test_R2,recall_TidakSehat_test,keterangan
+Optuna TPE,"LSTM units=128, dropout=0.38969, lr=0.00139049",12.0085,9.4201,13.1996,0.6237,0.137,<== TERBAIK by val_RMSE
+Grid Search,"LSTM units=32, dropout=0.3, lr=0.001",12.1239,9.7491,13.5011,0.6063,0.1644,
+Eksperimen manual sebelumnya,LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7),12.1889,9.3741,13.1544,0.6263,0.0822,
