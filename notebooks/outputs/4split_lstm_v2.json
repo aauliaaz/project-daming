@@ -1,0 +1,18 @@
+{
+  "model": "LSTM",
+  "dataset": "v2 (15 cuaca)",
+  "tuning": "Arch Search @ L14",
+  "val_RMSE": 14.0481,
+  "test_RMSE": 16.416,
+  "test_R2": 0.4632,
+  "test_MAE": 12.2289,
+  "params": {
+    "arch": "A_LSTM64_Dropout0.2_Dense32",
+    "lookback": 14,
+    "epochs_retrain": 40
+  },
+  "n_train_core": 3581,
+  "n_val": 727,
+  "n_train_full": 4308,
+  "n_test": 1154
+}

@@ -1,0 +1,6 @@
+model,val_MAE,val_RMSE,val_R2,val_MAPE,test_MAE,test_RMSE,test_R2,test_MAPE,accuracy,macro_f1,weighted_f1,recall_TidakSehat,keterangan
+"LSTM Optuna TPE | LSTM units=128, dropout=0.38969, lr=0.00139049",,12.0098,,,9.4201,13.1996,0.6237,,,,,0.137,<== TERBAIK (val_RMSE)
+"LSTM Grid Search | LSTM units=32, dropout=0.3, lr=0.001",,12.1239,,,9.7491,13.5011,0.6063,,,,,0.1644,
+LSTM perbaikan terbaik | LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7),9.2625,12.1889,0.5606,13.9373,9.3741,13.1544,0.6263,18.0419,0.858,0.601,0.8402,0.0822,
+LSTM awal terbaik | LSTM B (lebih besar 96-48 dp0.2),9.5195,12.357,0.5506,14.5678,11.3283,15.4702,0.4855,23.2358,0.8037,0.5251,0.7896,0.0685,
+LSTM weighted | LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7) + Weighted,9.4518,12.4867,0.5389,14.2051,9.7561,13.6384,0.5983,18.7967,0.8476,0.6308,0.8401,0.1918,

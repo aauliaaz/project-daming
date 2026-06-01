@@ -1,0 +1,4 @@
+Model,Jenis,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,recall_Tidak_Sehat,n_pred_PM25_gt_100
+Random Forest + Lag/Rolling,Random Forest (Perbaikan),,8.8839,12.319,0.6722,17.7956,0.0137,10
+LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7),LSTM (Perbaikan lama),12.1889,9.3741,13.1544,0.6263,18.0419,0.0822,22
+LSTM v2 (multi-input + lag/rolling + Optuna),LSTM (Perbaikan v2),11.7465,9.4918,13.0884,0.63,19.1168,0.0959,14

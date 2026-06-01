@@ -1,0 +1,90 @@
+{
+  "model_name": "LSTM v2 (multi-input, lag/rolling static, leakage-free, optuna-tuned)",
+  "algoritma": "LSTM Multi-Input (Keras Functional API)",
+  "arsitektur_terbaik": {
+    "lstm_units": [
+      128
+    ],
+    "static_units": 16,
+    "head_units": 16,
+    "dropout": 0.10357051295354469,
+    "l2": 0.0009394008801148033,
+    "lr": 0.0029927150428202946,
+    "batchnorm": true,
+    "lookback": 30,
+    "batch_size": 64,
+    "n_features_sequence": 11,
+    "n_features_static": 17
+  },
+  "target": "ISPU PM2.5",
+  "fitur_sequence": [
+    "ISPU PM2.5",
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip",
+    "bulan_sin",
+    "bulan_cos",
+    "hari_minggu_sin",
+    "hari_minggu_cos"
+  ],
+  "fitur_static": [
+    "pm25_lag_1",
+    "pm25_lag_3",
+    "pm25_lag_7",
+    "pm25_rolling_mean_3",
+    "pm25_rolling_mean_7",
+    "pm25_rolling_max_7",
+    "pm25_rolling_std_7",
+    "station_bundaran hi",
+    "station_jagakarsa",
+    "station_kebun jeruk",
+    "station_kelapa gading",
+    "station_lubang buaya",
+    "station_us embassy 1",
+    "station_us embassy 2",
+    "musim_Hujan",
+    "musim_Kemarau",
+    "musim_Transisi"
+  ],
+  "data_path": "c:\\Users\\User\\Air Pollution - Daming Project\\data\\final for modelling\\dataset_final_model.csv",
+  "split": "time-based 70/15/15 (train/validation/test)",
+  "pemilihan_model": "lowest val_RMSE via Optuna TPE",
+  "model_final_dilatih_pada": "train + validation (test tidak dipakai untuk training)",
+  "epoch_retrain_final": 9,
+  "n_trials_optuna": 25,
+  "rentang_test": [
+    "2024-07-21",
+    "2024-12-31"
+  ],
+  "metrik_test_final": {
+    "MAE": 9.4918,
+    "RMSE": 13.0884,
+    "R2": 0.63,
+    "MAPE": 19.1168
+  },
+  "evaluasi_pm25_tinggi": {
+    "n_aktual_gt_100": 73,
+    "n_prediksi_gt_100": 14,
+    "MAE_gt_100": 20.2383,
+    "RMSE_gt_100": 23.0288,
+    "MAPE_gt_100": 18.4922,
+    "rata_aktual": 107.3936,
+    "rata_prediksi": 87.1771
+  },
+  "metrik_kategori_test": {
+    "accuracy": 0.8624,
+    "macro_f1": 0.5997,
+    "weighted_f1": 0.8393,
+    "recall_tidak_sehat": 0.0959
+  },
+  "perbaikan_vs_versi_lama": [
+    "A1: tambah 7 fitur lag/rolling PM2.5 (sebagai static input post-LSTM)",
+    "A2: multi-input architecture (sequence + static)",
+    "A3: median imputation fit hanya di TRAIN (no leakage)",
+    "A5: y-scaling konsisten di tuning maupun retrain final",
+    "B4: Optuna TPE search luas (lookback/units/dropout/l2/lr/batch/batchnorm)"
+  ]
+}

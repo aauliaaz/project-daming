@@ -1,0 +1,3 @@
+model,jenis,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,recall_Tidak_Sehat,accuracy_kategori,MAE_PM25_gt_100,n_pred_PM25_gt_100
+Random Forest Grid Search,Random Forest (Grid Search dari 02_Modelling.ipynb),11.3266,8.784,12.2914,0.6725,17.8035,0.0137,0.8589,18.6207,1
+"LSTM Optuna TPE | LSTM units=128, dropout=0.38969, lr=0.00139049",LSTM TERBAIK FINAL (lstm_tuning),12.0098,8.9954,12.7177,0.6507,17.9112,0.0959,0.8702,18.1692,7

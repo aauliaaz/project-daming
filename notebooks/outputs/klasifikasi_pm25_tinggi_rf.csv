@@ -1,0 +1,8 @@
+metrik,nilai
+Average_Precision,0.21359066477789343
+AUC_ROC,0.8332335138579166
+Best_F1,0.34285714243878385
+Best_threshold,88.62622495586406
+Precision_at_best_F1,0.2441860465116279
+Recall_at_best_F1,0.5753424657534246
+baseline_proporsi_positif,0.06358885017421603

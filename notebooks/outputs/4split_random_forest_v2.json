@@ -1,0 +1,19 @@
+{
+  "model": "Random Forest",
+  "dataset": "v2 (15 cuaca)",
+  "tuning": "Grid Search",
+  "val_RMSE": 13.4999,
+  "test_RMSE": 14.4535,
+  "test_R2": 0.5839,
+  "test_MAE": 10.5609,
+  "params": {
+    "max_depth": null,
+    "min_samples_leaf": 1,
+    "min_samples_split": 5,
+    "n_estimators": 400
+  },
+  "n_train_core": 3679,
+  "n_val": 727,
+  "n_train_full": 4406,
+  "n_test": 1154
+}

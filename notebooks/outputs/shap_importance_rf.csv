@@ -1,0 +1,28 @@
+fitur,mean_abs_shap
+pm25_lag_1,11.2563
+visibility,1.9539
+pm25_rolling_mean_3,1.312
+windgust,1.1077
+temp,0.9924
+pm25_rolling_mean_7,0.9036
+pm25_rolling_max_7,0.5282
+solarenergy,0.511
+bulan_sin,0.431
+pm25_lag_7,0.4008
+humidity,0.3677
+pm25_lag_3,0.3479
+precip,0.3321
+pm25_rolling_std_7,0.2413
+hari_minggu_cos,0.2272
+station_lubang buaya,0.2138
+station_us embassy 1,0.2086
+musim_Kemarau,0.2061
+hari_minggu_sin,0.1681
+bulan_cos,0.1613
+station_kebun jeruk,0.1516
+musim_Hujan,0.0498
+station_jagakarsa,0.0245
+station_us embassy 2,0.0199
+station_bundaran hi,0.0144
+station_kelapa gading,0.0083
+musim_Transisi,0.0077

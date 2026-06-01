@@ -1,0 +1,3 @@
+model,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,recall_TidakSehat_test,accuracy_test,MAE_PM25_tinggi,n_pred_PM25_tinggi
+Random Forest Grid Search,11.3266,8.784,12.2914,0.6725,17.8035,0.0137,0.8589,18.6207,1
+LSTM B (lebih besar 96-48 dp0.2),12.357,11.3283,15.4702,0.4855,23.2358,0.0685,0.8037,19.6734,5
