@@ -1,0 +1,22 @@
+{
+  "eksperimen": "Per-station RF vs Unified RF (in-scope proposal)",
+  "dataset": "dataset_final_model.csv (v1)",
+  "unified": {
+    "val_RMSE": 5.0629,
+    "test_RMSE": 12.3743,
+    "test_R2": 0.6707,
+    "test_MAE": 8.9621,
+    "params": {
+      "max_depth": 15,
+      "min_samples_leaf": 2,
+      "min_samples_split": 5,
+      "n_estimators": 600
+    }
+  },
+  "per_station_overall": {
+    "test_RMSE": 12.7452,
+    "test_R2": 0.6507,
+    "test_MAE": 9.2486
+  },
+  "delta_test_R2": -0.02
+}

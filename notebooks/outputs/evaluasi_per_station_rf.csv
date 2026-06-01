@@ -1,0 +1,8 @@
+station,n_train,n_val,n_test,best_params,val_RMSE,val_R2,test_RMSE,test_R2,test_MAE
+bundaran hi,763,163,164,"{'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 300}",4.6239,0.9281,12.2523,0.6753,8.5164
+jagakarsa,763,163,164,"{'max_depth': None, 'min_samples_leaf': 1, 'n_estimators': 300}",4.2508,0.9254,10.4056,0.6762,7.6886
+kebun jeruk,763,163,164,"{'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 300}",5.5067,0.9192,12.9067,0.7419,9.0478
+kelapa gading,763,163,164,"{'max_depth': 20, 'min_samples_leaf': 1, 'n_estimators': 600}",4.4096,0.9428,11.1351,0.7006,8.2043
+lubang buaya,763,163,164,"{'max_depth': None, 'min_samples_leaf': 1, 'n_estimators': 300}",5.2885,0.918,16.881,0.4124,13.0371
+us embassy 1,763,163,164,"{'max_depth': None, 'min_samples_leaf': 2, 'n_estimators': 300}",4.8795,0.9369,11.348,0.6098,8.5106
+us embassy 2,763,163,164,"{'max_depth': None, 'min_samples_leaf': 2, 'n_estimators': 300}",4.7502,0.9232,13.2045,0.666,9.7356
