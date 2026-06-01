@@ -1,0 +1,72 @@
+{
+  "model_name": "LSTM Final",
+  "algoritma": "LSTM (Keras)",
+  "params": {
+    "units": 128,
+    "dropout": 0.38969,
+    "learning_rate": 0.00139049
+  },
+  "lookback": 7,
+  "epoch_terbaik": 10,
+  "n_features": 21,
+  "features_per_timestep": [
+    "ISPU PM2.5",
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip",
+    "bulan_sin",
+    "bulan_cos",
+    "hari_minggu_sin",
+    "hari_minggu_cos",
+    "musim_Hujan",
+    "musim_Kemarau",
+    "musim_Transisi",
+    "station_bundaran hi",
+    "station_jagakarsa",
+    "station_kebun jeruk",
+    "station_kelapa gading",
+    "station_lubang buaya",
+    "station_us embassy 1",
+    "station_us embassy 2"
+  ],
+  "target": "ISPU PM2.5",
+  "dataset": "dataset_final_new.csv",
+  "skema_split": "time-based 70/15/15 pada tanggal target sequence",
+  "final_model_dilatih_pada": "train + validation; test tidak dipakai untuk training",
+  "rentang_train": [
+    "2022-01-08",
+    "2024-02-08"
+  ],
+  "rentang_validation": [
+    "2024-02-09",
+    "2024-07-20"
+  ],
+  "rentang_test": [
+    "2024-07-21",
+    "2024-12-31"
+  ],
+  "metrik_test": {
+    "MAE": 9.973326683044434,
+    "RMSE": 14.279481072921175,
+    "R2": 0.5497583746910095,
+    "MAPE": 19.159934306739093
+  },
+  "metrik_kategori_test": {
+    "accuracy": 0.8501742160278746,
+    "macro_f1": 0.6181507346567111,
+    "weighted_f1": 0.8330856645794182,
+    "recall_tidak_sehat": 0.21052631578947367
+  },
+  "evaluasi_pm25_tinggi_test": {
+    "jumlah_aktual_PM25_gt_100": 76,
+    "jumlah_prediksi_PM25_gt_100": 30,
+    "jumlah_terdeteksi_PM25_gt_100": 16,
+    "MAE_PM25_gt_100": 17.688997268676758,
+    "RMSE_PM25_gt_100": 21.132756180608872,
+    "rata_aktual_PM25_gt_100": 108.63763427734375,
+    "rata_prediksi_PM25_gt_100": 91.30754852294922
+  }
+}

@@ -1,0 +1,7 @@
+model,dataset,tuning,val_RMSE,test_RMSE,test_R2,test_MAE,n_train_core,n_val,n_train_full,n_test,params_str
+Random Forest,v1 (6 cuaca),Grid Search,11.5178,12.2961,0.6469,8.9582,5166,924,6090,1540,"{""max_depth"": 15, ""min_samples_leaf"": 1, ""min_samples_split"": 2, ""n_estimators"": 400}"
+XGBoost,v1 (6 cuaca),Grid Search,10.9897,11.9178,0.6683,8.5949,5166,924,6090,1540,"{""colsample_bytree"": 0.9, ""learning_rate"": 0.03, ""max_depth"": 4, ""n_estimators"": 300, ""subsample"": 0.7}"
+LSTM,v1 (6 cuaca),Arch Search @ L14,11.7248,12.8195,0.6162,9.3516,5068,924,5992,1540,"{""arch"": ""B_LSTM128_Dropout0.3_Dense64"", ""lookback"": 14, ""epochs_retrain"": 40}"
+Random Forest,v2 (15 cuaca),Grid Search,13.4999,14.4535,0.5839,10.5609,3679,727,4406,1154,"{""max_depth"": null, ""min_samples_leaf"": 1, ""min_samples_split"": 5, ""n_estimators"": 400}"
+XGBoost,v2 (15 cuaca),Optuna,13.0214,14.1889,0.599,10.3362,3679,727,4406,1154,"{""n_estimators"": 900, ""max_depth"": 3, ""learning_rate"": 0.02324546002149562, ""subsample"": 0.8842487607537403, ""colsample_bytree"": 0.6429023186544731, ""min_child_weight"": 8, ""reg_alpha"": 0.5717415966207626, ""reg_lambda"": 1.0675716430095743}"
+LSTM,v2 (15 cuaca),Arch Search @ L14,14.0481,16.416,0.4632,12.2289,3581,727,4308,1154,"{""arch"": ""A_LSTM64_Dropout0.2_Dense32"", ""lookback"": 14, ""epochs_retrain"": 40}"

@@ -1,0 +1,3 @@
+metode,jumlah_evaluasi,waktu_detik,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,recall_TS_test,parameter_terbaik,keterangan
+Optuna TPE,30,159.4,11.3717,9.5237,13.8742,0.5734,17.9856,0.1316,"{'bootstrap': True, 'n_estimators': 200, 'max_depth': 24, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 0.5, 'max_samples': 0.9849148993894048}",<== val_RMSE terbaik
+Grid Search,96,511.1,11.3917,9.4795,13.7522,0.5809,17.9207,0.1447,"{'bootstrap': True, 'max_depth': None, 'max_features': 0.7, 'max_samples': 1.0, 'min_samples_leaf': 1, 'min_samples_split': 15, 'n_estimators': 200}",

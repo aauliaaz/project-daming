@@ -1,0 +1,7 @@
+Model,Dataset,Best_Config,val_RMSE,test_RMSE,test_R2,test_MAE,test_MAPE
+Random Forest,"v1 (proposal, 6 cuaca)",Random Forest Grid Search,11.3266,12.2914,0.6725,8.784,17.8035
+LSTM,"v1 (proposal, 6 cuaca)",LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L30),11.6059,13.6791,0.6017,9.9455,19.7078
+XGBoost,"v1 (proposal, 6 cuaca)",XGBoost Grid Search,8.6571,12.3986,0.668,8.8929,18.7027
+Random Forest,"v2 (bersih, 16 cuaca, OOS)","Random Forest (v2, 16 cuaca)",8.849,14.2953,0.6391,10.4154,25.4715
+LSTM,"v2 (bersih, 16 cuaca, OOS)","LSTM A_LSTM64 L14 (v2, 16 cuaca)",14.3328,16.0301,0.5499,11.8264,26.7325
+XGBoost,"v2 (bersih, 16 cuaca, OOS)",XGBoost v3 Grid Search,8.4082,14.1011,0.6558,10.0256,25.6075

@@ -1,28 +1,21 @@
 feature,importance
-num__pm25_lag_1,0.522961
-num__pm25_rolling_mean_3,0.126466
-num__pm25_rolling_mean_7,0.05717
-num__visibility,0.033359
-num__windgust,0.03239
-num__humidity,0.026629
-num__pm25_lag_7,0.026018
-num__solarenergy,0.024748
-num__temp,0.023656
-num__pm25_rolling_max_7,0.02318
-num__pm25_lag_3,0.020862
-num__pm25_rolling_std_7,0.020279
-num__precip,0.014045
-num__bulan_sin,0.010852
-num__bulan_cos,0.008289
-num__hari_minggu_sin,0.007712
-num__hari_minggu_cos,0.005244
-num__station_kebun jeruk,0.003336
-cat__musim_Kemarau,0.003023
-num__station_lubang buaya,0.002881
-num__station_us embassy 1,0.001644
-cat__musim_Transisi,0.0013
-cat__musim_Hujan,0.001128
-num__station_jagakarsa,0.0011
-num__station_us embassy 2,0.000672
-num__station_bundaran hi,0.000583
-num__station_kelapa gading,0.000473
+num__pm25_lag_1,0.385291
+num__pm25_rolling_mean_3,0.206422
+num__pm25_rolling_mean_7,0.114357
+num__pm25_rolling_max_7,0.048422
+num__pm25_lag_3,0.035275
+num__pm25_lag_7,0.027733
+num__humidity,0.02531
+num__windgust,0.024976
+num__visibility,0.024928
+num__pm25_rolling_std_7,0.022407
+num__temp,0.021135
+num__solarenergy,0.019593
+num__precip,0.011591
+num__bulan_sin,0.008653
+num__bulan_cos,0.007216
+num__hari_minggu_sin,0.005741
+num__hari_minggu_cos,0.00482
+cat__musim_Kemarau,0.003557
+cat__musim_Hujan,0.001425
+cat__musim_Transisi,0.001148

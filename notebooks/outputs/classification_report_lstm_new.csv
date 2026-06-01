@@ -1,0 +1,9 @@
+,precision,recall,f1-score,support
+Baik,0.7586,0.557,0.6423,158.0
+Sedang,0.8703,0.954,0.9102,914.0
+Tidak Sehat,0.5333,0.2105,0.3019,76.0
+Sangat Tidak Sehat,0.0,0.0,0.0,0.0
+Berbahaya,0.0,0.0,0.0,0.0
+accuracy,0.8502,0.8502,0.8502,0.8502
+macro avg,0.4324,0.3443,0.3709,1148.0
+weighted avg,0.8326,0.8502,0.8331,1148.0

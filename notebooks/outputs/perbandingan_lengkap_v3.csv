@@ -1,0 +1,28 @@
+Model,Jenis_Model,val_RMSE,MAE,RMSE,R2,MAPE,MAE_PM25_lebih_100,RMSE_PM25_lebih_100,Recall_Tidak_Sehat,Jumlah_Aktual_PM25_lebih_100,Jumlah_Prediksi_PM25_lebih_100,Catatan
+XGBoost v3 Grid Search,XGBoost (v3 dataset bersih),8.4082,10.0256,14.1011,0.6558,25.6075,15.5154,18.6975,0.2267,75.0,33.0,"v3 = dataset bersih (preprocess v2: +9 fitur cuaca, drop n_obs<12, drop PM2.5=0)"
+XGBoost Grid Search,XGBoost (Perbaikan v2),8.6571,8.8929,12.3986,0.668,18.7027,17.1647,19.6422,0.0411,73.0,12.0,Section perbaikan v2 (cross-station lag + XGBoost)
+"Random Forest (v2, 16 cuaca)",Random Forest (v2 dataset bersih),8.849,10.4154,14.2953,0.6391,25.4715,,,,,,"RF Grid Search pada dataset v2 (bersih + 16 cuaca, out-of-scope proposal)"
+XGBoost Optuna,XGBoost (Perbaikan v2),10.822,8.9683,12.4414,0.6657,18.6899,,,,,,Section perbaikan v2 (cross-station lag + XGBoost)
+Random Forest Grid Search,Random Forest (eksperimen awal/lanjutan),11.3266,8.784,12.2914,0.6725,17.8035,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+Random Forest Optuna,Random Forest (eksperimen awal/lanjutan),11.3654,8.7837,12.2732,0.6734,17.7734,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+Random Forest Manual Tuning,Random Forest (eksperimen awal/lanjutan),11.4165,8.7422,12.2304,0.6757,17.6214,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+XGBoost Baseline,XGBoost (Perbaikan v2),11.4179,9.1527,12.4931,0.6629,18.3161,,,,,,Section perbaikan v2 (cross-station lag + XGBoost)
+Random Forest Optuna + Bobot PM2.5 Tinggi,Random Forest (eksperimen awal/lanjutan),11.4367,8.9503,12.4972,0.6614,18.3081,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+Random Forest Awal,Random Forest (eksperimen awal/lanjutan),11.523,8.8795,12.3788,0.6678,17.8427,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L30),LSTM (Perbaikan),11.6059,9.9455,13.6791,0.6017,19.7078,18.216,21.2186,0.0,72.0,7.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+Random Forest + Lag/Rolling + Weighted High PM2.5,Random Forest (Perbaikan),11.633,9.0385,12.5144,0.6617,18.3531,18.9294,21.5324,0.0274,73.0,10.0,Section perbaikan RF (lag/rolling + weighted)
+Random Forest + Lag/Rolling,Random Forest (Perbaikan),11.637,8.9127,12.4233,0.6666,18.0011,19.1275,21.8323,0.0137,73.0,10.0,Section perbaikan RF (lag/rolling + weighted)
+LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L14),LSTM (Perbaikan),11.6812,9.6522,13.4584,0.6106,18.9686,19.1672,22.1584,0.0,73.0,6.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+Random Forest Optuna + Log Target,Random Forest (eksperimen awal/lanjutan),11.8548,8.7487,12.2822,0.673,16.293,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L7),LSTM (Perbaikan),11.9105,9.7372,13.541,0.604,19.6213,17.9183,20.8464,0.0137,73.0,11.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L14),LSTM (Perbaikan),11.9213,9.4648,13.2142,0.6246,18.7582,18.4348,21.7076,0.0548,73.0,17.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L30) + Weighted,LSTM (Perbaikan),11.9252,10.2435,14.0639,0.579,20.2397,15.2666,19.1868,0.2361,72.0,48.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+LSTM Perbaikan C_LSTM64+LSTM32_Dropout0.2_Dense32 (L14),LSTM (Perbaikan),12.3391,9.848,13.6285,0.6007,18.9795,20.4914,23.1572,0.0,73.0,0.0,"Section perbaikan LSTM (lookback/arsitektur/weighted, fitur konsisten + musim)"
+LSTM B (lebih besar 96-48 dp0.2),LSTM (eksperimen awal),12.357,11.3283,15.4702,0.4855,23.2358,,,,,,Section LSTM awal (A/B/C varian sebelumnya)
+XGBoost v3 Optuna,XGBoost (v3 dataset bersih),12.484,10.1634,14.214,0.6503,25.5443,,,,,,"v3 = dataset bersih (preprocess v2: +9 fitur cuaca, drop n_obs<12, drop PM2.5=0)"
+LSTM C (bidirectional 48-24),LSTM (eksperimen awal),12.5371,10.5587,14.4377,0.5519,20.6501,,,,,,Section LSTM awal (A/B/C varian sebelumnya)
+LSTM A (baseline 64-32 dp0.1),LSTM (eksperimen awal),12.7639,10.4329,14.3478,0.5575,20.6592,,,,,,Section LSTM awal (A/B/C varian sebelumnya)
+XGBoost v3 Baseline,XGBoost (v3 dataset bersih),12.8811,9.9841,14.179,0.652,25.4563,,,,,,"v3 = dataset bersih (preprocess v2: +9 fitur cuaca, drop n_obs<12, drop PM2.5=0)"
+Baseline Persistence (Lag-1),Random Forest (eksperimen awal/lanjutan),13.0245,10.1893,14.1752,0.5644,18.012,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)
+"LSTM A_LSTM64 L14 (v2, 16 cuaca)",LSTM (v2 dataset bersih),14.3328,11.8264,16.0301,0.5499,26.7325,,,,,,"LSTM Arch A lookback 14 pada dataset v2 (bersih + 16 cuaca, out-of-scope proposal)"
+Baseline Mean,Random Forest (eksperimen awal/lanjutan),18.9335,17.2956,21.5834,-0.0099,35.4756,,,,,,Section pengembangan lanjutan (Optuna & Grid Search)

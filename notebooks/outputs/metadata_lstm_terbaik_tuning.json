@@ -2,9 +2,9 @@
   "algoritma": "LSTM (Keras)",
   "metode_pemenang": "Optuna TPE",
   "best_config": {
-    "units": 128,
-    "dropout": 0.38969,
-    "learning_rate": 0.00139049
+    "units": 32,
+    "dropout": 0.317454,
+    "learning_rate": 0.00112594
   },
   "lookback": 7,
   "n_features": 21,
@@ -35,33 +35,33 @@
   "pemilihan_model": "best validation RMSE; test tidak dipakai untuk memilih konfigurasi",
   "final_model_dilatih_pada": "train + validation; test tidak dipakai untuk training",
   "metrik_search_validation": {
-    "MAE": 9.0844,
-    "RMSE": 12.0085,
-    "R2": 0.5735,
-    "MAPE": 13.9349
+    "MAE": 9.0046,
+    "RMSE": 12.1812,
+    "R2": 0.5303,
+    "MAPE": 14.5414
   },
   "metrik_search_test": {
-    "MAE": 9.420130729675293,
-    "RMSE": 13.19955573056817,
-    "R2": 0.6236882209777832,
-    "MAPE": 18.510402533223335
+    "MAE": 10.700212478637695,
+    "RMSE": 15.213996787241264,
+    "R2": 0.4888981580734253,
+    "MAPE": 20.212756860161956
   },
   "metrik_final_test_after_retrain": {
-    "MAE": 8.995379447937012,
-    "RMSE": 12.717718209070073,
-    "R2": 0.6506606340408325,
-    "MAPE": 17.91122627118839
+    "MAE": 10.194485664367676,
+    "RMSE": 14.559571589780026,
+    "R2": 0.5319222807884216,
+    "MAPE": 19.58177958222553
   },
-  "recall_TidakSehat_final_test": 0.0958904109589041,
+  "recall_TidakSehat_final_test": 0.15789473684210525,
   "evaluasi_pm25_tinggi_final_test": {
-    "jumlah_aktual_PM25_gt_100": 73,
-    "jumlah_prediksi_PM25_gt_100": 15,
-    "MAE_PM25_gt_100": 18.169248580932617,
-    "RMSE_PM25_gt_100": 21.680969134414216
+    "jumlah_aktual_PM25_gt_100": 76,
+    "jumlah_prediksi_PM25_gt_100": 27,
+    "MAE_PM25_gt_100": 16.91663932800293,
+    "RMSE_PM25_gt_100": 20.7745414747553
   },
-  "waktu_grid_search_detik": 113.7765486240387,
-  "waktu_optuna_detik": 165.7862708568573,
-  "waktu_retrain_final_detik": 7.465508937835693,
+  "waktu_grid_search_detik": 138.13773775100708,
+  "waktu_optuna_detik": 183.70372438430786,
+  "waktu_retrain_final_detik": 8.038885354995728,
   "n_evaluasi_grid": 12,
   "n_evaluasi_optuna": 16
 }

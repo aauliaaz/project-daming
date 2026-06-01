@@ -1,11 +1,11 @@
 {
-  "model_name": "LSTM Optuna TPE | LSTM units=128, dropout=0.38969, lr=0.00139049",
+  "model_name": "LSTM Optuna TPE | LSTM units=32, dropout=0.317454, lr=0.00112594",
   "sumber": "lstm_tuning",
   "algoritma": "LSTM (Keras)",
   "best_params": {
-    "units": 128,
-    "dropout": 0.38969,
-    "learning_rate": 0.00139049
+    "units": 32,
+    "dropout": 0.317454,
+    "learning_rate": 0.00112594
   },
   "lookback": 7,
   "n_features": 21,
@@ -33,8 +33,8 @@
     "station_us embassy 2"
   ],
   "target": "ISPU PM2.5",
-  "dataset": "dataset_final_model.csv",
-  "data_path": "c:\\Users\\User\\Air Pollution - Daming Project\\data\\final for modelling\\dataset_final_model.csv",
+  "dataset": "dataset_final_new.csv",
+  "data_path": "c:\\Users\\User\\Air Pollution - Daming Project\\data\\final for modelling\\dataset_final_new.csv",
   "skema_split": "time-based 70/15/15 (train/validation/test) pada tanggal target sequence",
   "rentang_train": [
     "2022-01-15",
@@ -49,22 +49,22 @@
     "2024-12-31"
   ],
   "metrik_validation": {
-    "MAE": 9.0847,
-    "RMSE": 12.0098,
-    "R2": 0.5735,
-    "MAPE": 13.9383
+    "MAE": 9.0046,
+    "RMSE": 12.1812,
+    "R2": 0.5303,
+    "MAPE": 14.5414
   },
   "metrik_test": {
-    "MAE": 8.995379447937012,
-    "RMSE": 12.717718209070073,
-    "R2": 0.6506606340408325,
-    "MAPE": 17.911226783171607
+    "MAE": 10.194485664367676,
+    "RMSE": 14.559571589780026,
+    "R2": 0.5319222807884216,
+    "MAPE": 19.58177958222553
   },
   "metrik_kategori_test": {
-    "accuracy": 0.8702090592334495,
-    "macro_f1": 0.6177076046101956,
-    "weighted_f1": 0.8498819505320756,
-    "recall_tidak_sehat": 0.0958904109589041
+    "accuracy": 0.8466898954703833,
+    "macro_f1": 0.596173394554799,
+    "weighted_f1": 0.8276194513316614,
+    "recall_tidak_sehat": 0.15789473684210525
   },
   "catatan": "Pemilihan berdasar val_RMSE terkecil. Test set TIDAK pernah dipakai untuk seleksi model."
 }

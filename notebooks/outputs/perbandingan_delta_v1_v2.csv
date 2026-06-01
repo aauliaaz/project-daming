@@ -1,0 +1,4 @@
+Model,delta_test_R2,delta_test_RMSE,delta_test_MAE
+Random Forest,-0.033,2.0,1.63
+LSTM,-0.052,2.35,1.88
+XGBoost,-0.012,1.7,1.13

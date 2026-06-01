@@ -1,10 +1,10 @@
 {
-  "nama_model": "LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7)",
+  "nama_model": "LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L14)",
   "algoritma": "LSTM (Keras)",
   "arsitektur": "B_LSTM128_Dropout0.3_Dense64",
-  "lookback": 7,
+  "lookback": 14,
   "pakai_bobot_y_gt_100": false,
-  "epoch_terbaik": 8,
+  "epoch_terbaik": 11,
   "target": "ISPU PM2.5",
   "features_per_timestep": [
     "ISPU PM2.5",
@@ -32,25 +32,25 @@
   "n_features": 21,
   "skema_split": "time-based 70/15/15 (train/validation/test) on sequence end date",
   "metrik_validation": {
-    "MAE": 9.262504577636719,
-    "RMSE": 12.188902788860409,
-    "R2": 0.5606340169906616,
-    "MAPE": 13.937324834853932
+    "MAE": 9.413418769836426,
+    "RMSE": 12.65210194369892,
+    "R2": 0.4959426522254944,
+    "MAPE": 14.877898899466754
   },
   "metrik_test": {
-    "MAE": 9.374075889587402,
-    "RMSE": 13.154378508701782,
-    "R2": 0.6262598037719727,
-    "MAPE": 18.041903283394255
+    "MAE": 11.07797908782959,
+    "RMSE": 15.666686091850629,
+    "R2": 0.46041709184646606,
+    "MAPE": 20.479728182119622
   },
-  "recall_tidak_sehat_test": 0.0821917808219178,
+  "recall_tidak_sehat_test": 0.09210526315789473,
   "evaluasi_pm25_tinggi": {
-    "n_aktual_PM25_gt_100": 73,
-    "n_prediksi_PM25_gt_100": 22,
-    "MAE_PM25_gt_100": 17.99397850036621,
-    "RMSE_PM25_gt_100": 21.268253878653862,
-    "MAPE_PM25_gt_100": 16.37244723492555,
-    "rata_aktual_PM25_gt_100": 107.39363861083984,
-    "rata_prediksi_PM25_gt_100": 89.399658203125
+    "n_aktual_PM25_gt_100": 76,
+    "n_prediksi_PM25_gt_100": 35,
+    "MAE_PM25_gt_100": 19.88675308227539,
+    "RMSE_PM25_gt_100": 23.09558940577183,
+    "MAPE_PM25_gt_100": 17.819285412375383,
+    "rata_aktual_PM25_gt_100": 108.63763427734375,
+    "rata_prediksi_PM25_gt_100": 88.98039245605469
   }
 }

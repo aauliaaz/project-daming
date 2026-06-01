@@ -37,7 +37,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "final for modelling" / "dataset_final_model.csv"
+DATA_PATH = ROOT / "data" / "final for modelling" / "dataset_final_new.csv"
 DIR_OUTPUT = ROOT / "notebooks" / "outputs"
 
 TARGET = "ISPU PM2.5"
@@ -173,8 +173,12 @@ def bangun_sequences(
         sub = sub.sort_values("tanggal").reset_index(drop=True)
         arr = sub[fitur].values.astype(np.float32)
         y = sub[TARGET].values.astype(np.float32)
-        tanggal = sub["tanggal"].values
+        tanggal = pd.to_datetime(sub["tanggal"]).values.astype("datetime64[D]")
         for i in range(lookback, len(sub)):
+            if not np.all(
+                np.diff(tanggal[i - lookback : i + 1]) == np.timedelta64(1, "D")
+            ):
+                continue
             X_list.append(arr[i - lookback : i])
             y_list.append(y[i])
             tanggal_list.append(tanggal[i])
@@ -192,14 +196,28 @@ def siapkan_data(lookback: int) -> DataBundle:
         raise FileNotFoundError(f"Dataset tidak ditemukan: {DATA_PATH}")
 
     df = pd.read_csv(DATA_PATH, parse_dates=["tanggal"])
-    station_cols = [c for c in df.columns if c.startswith("station_")]
-    if not station_cols:
-        raise ValueError("Kolom one-hot station_ tidak ditemukan.")
+    station_cols = sorted(c for c in df.columns if c.startswith("station_"))
+    if "station" not in df.columns:
+        if not station_cols:
+            raise ValueError("Kolom station maupun station_* tidak ditemukan.")
+        df["station"] = df[station_cols].idxmax(axis=1).str.replace(
+            "station_", "", regex=False
+        )
+    else:
+        df["station"] = df["station"].astype(str).str.strip().str.lower()
 
-    df["station"] = df[station_cols].idxmax(axis=1).str.replace("station_", "", regex=False)
+    if not station_cols:
+        station_dummies = pd.get_dummies(df["station"], prefix="station", dtype=float)
+        df = pd.concat([df, station_dummies], axis=1)
+        station_cols = sorted(station_dummies.columns.tolist())
+    else:
+        df[station_cols] = df[station_cols].astype(float)
+
     tanpa_cuaca = df[KOLOM_CUACA].isna().all(axis=1)
     df = df.loc[~tanpa_cuaca].copy()
     df = df.sort_values(["station", "tanggal"]).reset_index(drop=True)
+    if df.duplicated(["station", "tanggal"]).any():
+        raise ValueError("Terdapat tanggal duplikat pada station yang sama.")
 
     df["bulan_sin"] = np.sin(2 * np.pi * df["bulan"] / 12)
     df["bulan_cos"] = np.cos(2 * np.pi * df["bulan"] / 12)
@@ -219,11 +237,11 @@ def siapkan_data(lookback: int) -> DataBundle:
         + musim_cols
         + station_cols
     )
-    for col in fitur:
-        if df[col].isna().any():
-            df[col] = df.groupby("station")[col].transform(lambda s: s.fillna(s.median()))
-        if df[col].isna().any():
-            df[col] = df[col].fillna(df[col].median())
+    df = df.dropna(subset=[TARGET]).reset_index(drop=True)
+    fitur_input = [col for col in fitur if col != TARGET]
+    df[fitur_input] = df.groupby("station")[fitur_input].ffill()
+    baris_input_kosong = int(df[fitur_input].isna().any(axis=1).sum())
+    df = df.dropna(subset=fitur_input).reset_index(drop=True)
 
     X, y, tanggal, stasiun = bangun_sequences(df, fitur, lookback)
     tanggal_unik = np.array(sorted(np.unique(tanggal)))
@@ -246,6 +264,7 @@ def siapkan_data(lookback: int) -> DataBundle:
     print("Dataset tuning LSTM siap")
     print(f"  Data source     : {DATA_PATH}")
     print(f"  Baris dibuang   : {int(tanpa_cuaca.sum())} (tanpa seluruh data cuaca)")
+    print(f"  Input dibuang   : {baris_input_kosong} (riwayat input belum tersedia)")
     print(f"  Lookback        : {lookback} hari")
     print(f"  Fitur/timestep  : {len(fitur)}")
     print(f"  Train sequence  : {int(m_train.sum())}")

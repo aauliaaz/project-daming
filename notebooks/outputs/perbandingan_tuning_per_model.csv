@@ -1,0 +1,23 @@
+Model,Tuning_Method,Konfigurasi,val_RMSE,val_R2,test_RMSE,test_R2,test_MAE,test_MAPE,TERBAIK_per_model
+LSTM,Optuna TPE,"LSTM units=128, dropout=0.38969, lr=0.00139049",12.0085,0.5735,13.1996,0.6237,9.4201,18.5104,TERBAIK
+LSTM,Grid Search,"LSTM units=32, dropout=0.3, lr=0.001",12.1239,0.5653,13.5011,0.6063,9.7491,19.4214,
+LSTM,Lookback Search,LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7),12.1889,,13.1544,0.6263,9.3741,18.0419,
+LSTM,Lookback Search,LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L14),12.3461,,13.1871,0.6262,9.4899,18.5207,
+LSTM,Arsitektur Search,LSTM B (lebih besar 96-48 dp0.2),12.357,0.5506,15.4702,0.4855,11.3283,23.2358,
+LSTM,Lookback Search,LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L30),12.4214,,13.5573,0.6088,9.7256,19.1662,
+LSTM,Weighted Training,LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7) + Weighted,12.4867,,13.6384,0.5983,9.7561,18.7967,
+LSTM,Lookback Search,LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L14),12.4874,,13.5623,0.6046,9.7375,19.2336,
+LSTM,Arsitektur Search,LSTM C (bidirectional 48-24),12.5371,0.5374,14.4377,0.5519,10.5587,20.6501,
+LSTM,Arsitektur Search,LSTM A (baseline 64-32 dp0.1),12.7639,0.5206,14.3478,0.5575,10.4329,20.6592,
+LSTM,Lookback Search,LSTM Perbaikan C_LSTM64+LSTM32_Dropout0.2_Dense32 (L14),13.877,,14.5161,0.547,10.7311,21.9567,
+Random Forest,Grid Search,Random Forest Grid Search,11.3266,0.6211,12.2914,0.6725,8.784,17.8035,TERBAIK
+Random Forest,Optuna,Random Forest Optuna,11.3654,0.6185,12.2732,0.6734,8.7837,17.7734,
+Random Forest,Manual Tuning,Random Forest Manual Tuning,11.4165,0.6151,12.2304,0.6757,8.7422,17.6214,
+Random Forest,Optuna,Random Forest Optuna + Bobot PM2.5 Tinggi,11.4367,0.6137,12.4972,0.6614,8.9503,18.3081,
+Random Forest,Default,Random Forest Awal,11.523,0.6079,12.3788,0.6678,8.8795,17.8427,
+Random Forest,Optuna,Random Forest Optuna + Log Target,11.8548,0.585,12.2822,0.673,8.7487,16.293,
+Random Forest,Baseline,Baseline Persistence (Lag-1),13.0245,0.499,14.1752,0.5644,10.1893,18.012,
+Random Forest,Baseline,Baseline Mean,18.9335,-0.0587,21.5834,-0.0099,17.2956,35.4756,
+XGBoost,Grid Search,XGBoost Grid Search,8.6451,0.779,12.3898,0.6684,8.8809,18.71,TERBAIK
+XGBoost,Optuna,XGBoost Optuna,10.822,0.6537,12.4414,0.6657,8.9683,18.6899,
+XGBoost,Baseline,XGBoost Baseline,11.4179,0.6145,12.4931,0.6629,9.1527,18.3161,

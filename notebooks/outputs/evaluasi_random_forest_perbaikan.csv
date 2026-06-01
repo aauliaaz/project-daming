@@ -1,3 +1,3 @@
 model,jenis_model,MAE,RMSE,R2,MAPE,MAE_PM25_gt_100,RMSE_PM25_gt_100,jumlah_aktual_PM25_gt_100,jumlah_prediksi_PM25_gt_100,rata_aktual_PM25_gt_100,rata_prediksi_PM25_gt_100,recall_Tidak_Sehat
-Random Forest + Lag/Rolling,Random Forest (Perbaikan),8.8839,12.319,0.6722,17.7956,18.8893,21.5495,73,10,107.3936,88.5044,0.0137
-Random Forest + Lag/Rolling + Weighted High PM2.5,Random Forest (Perbaikan),9.0425,12.4991,0.6626,18.388,17.5901,20.4616,73,15,107.3936,89.8036,0.0411
+Random Forest + Lag/Rolling,Random Forest (Perbaikan),9.5979,13.8818,0.5745,18.3256,18.3503,21.6267,76,20,108.6376,90.7498,0.0789
+Random Forest + Lag/Rolling + Weighted High PM2.5,Random Forest (Perbaikan),9.7929,14.1414,0.5584,18.7031,17.5232,20.7554,76,29,108.6376,91.9399,0.1579

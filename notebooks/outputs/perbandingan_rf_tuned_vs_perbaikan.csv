@@ -1,0 +1,3 @@
+model,jenis,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,accuracy_kategori,recall_Tidak_Sehat,MAE_PM25_gt_100
+Random Forest Optuna,"RF Tuned (proposal, Optuna/Grid Search)",11.3717,9.5237,13.8742,0.5734,17.9856,0.8545,0.1316,18.2597
+Random Forest + Lag/Rolling,"RF Perbaikan (eksperimen lanjutan, lag/rolling + weighted)",11.5717,9.5979,13.8818,0.5745,18.3256,,0.0789,18.350269746515874

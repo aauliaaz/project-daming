@@ -1,9 +1,9 @@
 keterangan,nilai
-Jumlah data PM2.5 > 100 pada test set,73.0
+Jumlah data PM2.5 > 100 pada test set,76.0
 Total data test set,1141.0
-MAE (PM2.5 > 100),19.6734
-RMSE (PM2.5 > 100),22.1607
-MAPE (PM2.5 > 100) %,17.9665
-Rata-rata aktual (PM2.5 > 100),107.3936
-Rata-rata prediksi (PM2.5 > 100),87.9297
+MAE (PM2.5 > 100),21.3161
+RMSE (PM2.5 > 100),23.7444
+MAPE (PM2.5 > 100) %,19.2045
+Rata-rata aktual (PM2.5 > 100),108.6376
+Rata-rata prediksi (PM2.5 > 100),87.5422
 Jumlah PM2.5>100 yang JUGA diprediksi >100,5.0
