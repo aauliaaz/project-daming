@@ -1,10 +1,10 @@
 {
-  "nama_model": "LSTM Perbaikan B_LSTM128_Dropout0.3_Dense64 (L7)",
+  "nama_model": "LSTM Perbaikan A_LSTM64_Dropout0.2_Dense32 (L14)",
   "algoritma": "LSTM (Keras)",
-  "arsitektur": "B_LSTM128_Dropout0.3_Dense64",
-  "lookback": 7,
+  "arsitektur": "A_LSTM64_Dropout0.2_Dense32",
+  "lookback": 14,
   "pakai_bobot_y_gt_100": false,
-  "epoch_terbaik": 8,
+  "epoch_terbaik": 16,
   "target": "ISPU PM2.5",
   "features_per_timestep": [
     "ISPU PM2.5",
@@ -20,37 +20,30 @@
     "hari_minggu_cos",
     "musim_Hujan",
     "musim_Kemarau",
-    "musim_Transisi",
-    "station_bundaran hi",
-    "station_jagakarsa",
-    "station_kebun jeruk",
-    "station_kelapa gading",
-    "station_lubang buaya",
-    "station_us embassy 1",
-    "station_us embassy 2"
+    "musim_Transisi"
   ],
-  "n_features": 21,
+  "n_features": 14,
   "skema_split": "time-based 70/15/15 (train/validation/test) on sequence end date",
   "metrik_validation": {
-    "MAE": 9.262504577636719,
-    "RMSE": 12.188902788860409,
-    "R2": 0.5606340169906616,
-    "MAPE": 13.937324834853932
+    "MAE": 9.131237983703613,
+    "RMSE": 12.233293624383853,
+    "R2": 0.5287608504295349,
+    "MAPE": 14.288710274193154
   },
   "metrik_test": {
-    "MAE": 9.374075889587402,
-    "RMSE": 13.154378508701782,
-    "R2": 0.6262598037719727,
-    "MAPE": 18.041903283394255
+    "MAE": 10.142048835754395,
+    "RMSE": 14.488331276032534,
+    "R2": 0.5385329723358154,
+    "MAPE": 19.57542241635567
   },
-  "recall_tidak_sehat_test": 0.0821917808219178,
+  "recall_tidak_sehat_test": 0.2631578947368421,
   "evaluasi_pm25_tinggi": {
-    "n_aktual_PM25_gt_100": 73,
-    "n_prediksi_PM25_gt_100": 22,
-    "MAE_PM25_gt_100": 17.99397850036621,
-    "RMSE_PM25_gt_100": 21.268253878653862,
-    "MAPE_PM25_gt_100": 16.37244723492555,
-    "rata_aktual_PM25_gt_100": 107.39363861083984,
-    "rata_prediksi_PM25_gt_100": 89.399658203125
+    "n_aktual_PM25_gt_100": 76,
+    "n_prediksi_PM25_gt_100": 42,
+    "MAE_PM25_gt_100": 16.42820930480957,
+    "RMSE_PM25_gt_100": 20.677726903423842,
+    "MAPE_PM25_gt_100": 14.68754981391772,
+    "rata_aktual_PM25_gt_100": 108.63763427734375,
+    "rata_prediksi_PM25_gt_100": 92.94403839111328
   }
 }
