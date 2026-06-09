@@ -1,0 +1,81 @@
+{
+  "model_name": "LSTM_64",
+  "algoritma": "LSTM multi-input (Keras)",
+  "dataset": "dataset_final_new.csv",
+  "target": "ISPU PM2.5",
+  "lookback": 7,
+  "fitur_sequence": [
+    "ISPU PM2.5",
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip"
+  ],
+  "fitur_context": [
+    "temp",
+    "humidity",
+    "visibility",
+    "windgust",
+    "solarenergy",
+    "precip",
+    "bulan_sin",
+    "bulan_cos",
+    "hari_minggu_sin",
+    "hari_minggu_cos",
+    "musim_Hujan",
+    "musim_Kemarau",
+    "musim_Transisi",
+    "station_bundaran hi",
+    "station_jagakarsa",
+    "station_kebun jeruk",
+    "station_kelapa gading",
+    "station_lubang buaya",
+    "station_us embassy 1",
+    "station_us embassy 2"
+  ],
+  "best_params": {
+    "nama": "LSTM_64",
+    "units": 64,
+    "dropout": 0.25,
+    "learning_rate": 0.001
+  },
+  "best_epoch": 14,
+  "pemilihan_model": "validation RMSE terendah; test hanya untuk evaluasi akhir",
+  "model_evaluasi_dilatih_pada": "train; validation untuk seleksi kandidat dan early stopping",
+  "cutoff_train": "2024-02-07",
+  "cutoff_validation": "2024-07-20",
+  "rentang_test": [
+    "2024-07-20",
+    "2024-12-31"
+  ],
+  "baris_test": 1155,
+  "metrik_validation": {
+    "MAE": 8.492277145385742,
+    "RMSE": 11.529551476574298,
+    "R2": 0.5797810554504395,
+    "MAPE": 13.495252816161738
+  },
+  "metrik_test": {
+    "MAE": 9.767484664916992,
+    "RMSE": 14.370751856153275,
+    "R2": 0.5423314571380615,
+    "MAPE": 18.344752912034572
+  },
+  "metrik_kategori_test": {
+    "accuracy": 0.8571428571428571,
+    "macro_f1": 0.6311331677267806,
+    "weighted_f1": 0.8420325090334908,
+    "recall_tidak_sehat": 0.21052631578947367
+  },
+  "evaluasi_pm25_tinggi_test": {
+    "jumlah_aktual_PM25_gt_100": 76,
+    "jumlah_prediksi_PM25_gt_100": 33,
+    "jumlah_terdeteksi_PM25_gt_100": 16,
+    "MAE_PM25_gt_100": 16.546293258666992,
+    "RMSE_PM25_gt_100": 20.51026696621452,
+    "rata_aktual_PM25_gt_100": 108.63763427734375,
+    "rata_prediksi_PM25_gt_100": 92.58660888671875
+  }
+}

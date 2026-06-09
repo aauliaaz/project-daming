@@ -1,0 +1,2 @@
+jumlah_aktual_PM25_gt_100,jumlah_prediksi_PM25_gt_100,jumlah_terdeteksi_PM25_gt_100,MAE_PM25_gt_100,RMSE_PM25_gt_100,rata_aktual_PM25_gt_100,rata_prediksi_PM25_gt_100
+76,33,16,16.546293,20.510267,108.637634,92.586609

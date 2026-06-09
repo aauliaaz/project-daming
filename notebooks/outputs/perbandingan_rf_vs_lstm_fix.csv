@@ -1,0 +1,3 @@
+model,algoritma,val_RMSE,test_MAE,test_RMSE,test_R2,test_MAPE,accuracy_kategori,macro_f1,recall_tidak_sehat,keterangan
+Random Forest Optuna,Random Forest Regression,11.37171,9.523678,13.874182,0.573414,17.985581,0.854545,0.598098,0.131579,<== RMSE TEST TERENDAH
+LSTM_64,LSTM multi-input (Keras),11.529551,9.767485,14.370752,0.542331,18.344753,0.857143,0.631133,0.210526,
